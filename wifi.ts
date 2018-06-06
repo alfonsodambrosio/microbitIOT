@@ -66,7 +66,7 @@ namespace AlfonsoIoT {
     //%block="Connect to Alfonso MQTT server"
 	//% weight=44
 	//% blockGap=7	
-    export function connectAlfonsoMQTT(): void {
+    export function connectmuseMQTT(): void {
         serial.writeLine("(AT+startMQTT?host=13.58.53.42&port=1883&clientId=100&username=omlxmgsy&password=AoGUfQNPkeSH)");
 		while(true) {
 			serial.writeLine("(AT+write_sensor_data?p0=" + pins.analogReadPin(AnalogPin.P0) + "&p1=" + pins.analogReadPin(AnalogPin.P1) + "&p2=" + pins.analogReadPin(AnalogPin.P2) + ")")
