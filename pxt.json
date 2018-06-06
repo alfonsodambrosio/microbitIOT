@@ -1,5 +1,5 @@
 {
-    "name": "microbitIOTn",
+    "name": "AlfonsoIOT",
     "version": "0.0.2",
     "description": "Plugin for alfonso IOT using  in PXT",
     "license": "MIT",
@@ -9,7 +9,7 @@
     "files": [
         "README.md",
         "ns.ts",
-        "robotic.ts"
+        "wifi.ts"
     ],
     "testFiles": [
         "tests.ts"
