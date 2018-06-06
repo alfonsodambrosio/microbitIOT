@@ -1,32 +1,21 @@
 serial.onDataReceived(serial.delimiters(Delimiters.NewLine), () => {
     OLED.showString(serial.readLine())
 })
-input.onButtonPressed(Button.AB, () => {
-    AlfonsoIOT.setWifi("Alfonso", "12345678")
-})
 input.onButtonPressed(Button.A, () => {
-    AlfonsoIOT.sendThingspeak("XXXXXXXXXXXXXX", 80, 0)
+    AlfonsoROBOT.control180Servo(AlfonsoROBOT.Servo.Servo5, 0)
+    AlfonsoROBOT.control360Servo(AlfonsoROBOT.Servo.Servo6, AlfonsoROBOT.ServoDirection.clockwise, 100)
 })
 input.onButtonPressed(Button.B, () => {
-    AlfonsoIOT.sendIFTTT(
-    "XXXXXXXXXXXXXXXXXX",
-    "email",
-    0,
-    0
-    )
+    AlfonsoROBOT.control180Servo(AlfonsoROBOT.Servo.Servo5, 180)
+    AlfonsoROBOT.control360Servo(AlfonsoROBOT.Servo.Servo6, AlfonsoROBOT.ServoDirection.anticlockwise, 100)
 })
-input.onPinPressed(TouchPin.P0, () => {
-    AlfonsoIOT.sendBattery()
-})
-input.onPinPressed(TouchPin.P1, () => {
-    AlfonsoIOT.sendTest()
-})
-input.onPinPressed(TouchPin.P2, () => {
-    AlfonsoIOT.controlServo(5, 100)
-})
-basic.showIcon(IconNames.Angry)
+MuseIoT.initializeWifi()
 OLED.init(32, 128)
-AlfonsoIOT.initializeWifi()
 basic.forever(() => {
-	
+    AlfonsoROBOT.motorOn(AlfonsoROBOT.Motors.Motor1, AlfonsoROBOT.MotorDirection.Forward, 100)
+    AlfonsoROBOT.motorOn(AlfonsoROBOT.Motors.Motor2, AlfonsoROBOT.MotorDirection.Forward, 100)
+    basic.pause(500)
+    AlfonsoROBOT.motorOn(AlfonsoROBOT.Motors.Motor1, AlfonsoROBOT.MotorDirection.Backward, 100)
+    AlfonsoROBOT.motorOn(AlfonsoROBOT.Motors.Motor2, AlfonsoROBOT.MotorDirection.Backward, 100)
+    basic.pause(500)
 })
