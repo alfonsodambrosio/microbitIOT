@@ -1,5 +1,5 @@
 {
-    "name": "pxt-AlfonsoIOT",
+    "name": "microbitIOT",
     "version": "1.0.0",
     "description": "Blocks to simplify using Micro:bit and wifi",
     "license": "MIT",
