@@ -1,0 +1,20 @@
+{
+    "name": "pxt-AlfonsoIOT",
+    "version": "1.0.0",
+    "description": "Blocks to simplify using Micro:bit and wifi",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*",		
+		"pxt-AlfonsoIOT-plugin": "github:AlfonsoIOT/pxt-robotic-shield",
+        "SSD1306_OLED": "github:tinkertanker/pxt-oled-ssd1306"
+    },
+    "files": [
+        "README.md",
+        "ns.ts",
+        "wifi.ts"
+    ],
+    "testFiles": [
+        "tests.ts"
+    ],
+    "public": true
+}
