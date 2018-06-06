@@ -1,17 +1,15 @@
 {
-    "name": "microbitIOT",
-    "version": "1.0.0",
-    "description": "Blocks to simplify using Micro:bit and wifi",
+    "name": "microbitIOTn",
+    "version": "0.0.2",
+    "description": "Plugin for alfonso IOT using  in PXT",
     "license": "MIT",
     "dependencies": {
-        "core": "*",		
-		"pxt-AlfonsoIOT-plugin": "github:alfonsodambrosio/microbitIOT",
-        "SSD1306_OLED": "github:tinkertanker/pxt-oled-ssd1306"
+        "core": "*"
     },
     "files": [
         "README.md",
         "ns.ts",
-        "wifi.ts"
+        "robotic.ts"
     ],
     "testFiles": [
         "tests.ts"
